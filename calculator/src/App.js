@@ -1,13 +1,30 @@
 import "./styles.css"
 import logo from './logo.svg';
 import './App.css';
+import React, {useReducer} from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "ADD-DIGIT":
+
+    case "ADD-OPERATION":
+
+    case "CLEAR":
+
+    case "DELETE":
+
+    case "EQUAL":
+  }
+}
 
 function App() {
+  const [state, dispatch] = useReducer(reducer)
+
   return (
     <div className="calculator-grid">
       <div className="output">
-        <div className="previous-operand">102,201 *</div>
-        <div className="current-operand">102,291</div>
+        <div className="previous-operand"></div>
+        <div className="current-operand"></div>
       </div>
       <button className="span-two">AC</button>
       <button>DEL</button>
