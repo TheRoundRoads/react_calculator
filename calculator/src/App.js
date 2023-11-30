@@ -32,6 +32,13 @@ function reducer(state, action) {
         currentOperand: state.currentOperand + action.value
       }
     case "ADD-OPERATION":
+      if (action.value === "-" && state.currentOperand === "") {
+        return {
+          ...state,
+          currentOperand: "-",
+          overwite: false
+        }
+      }
       if (state.currentOperand === "" || state.currentOperand === "-") return state;
 
       if (state.previousOperand === "") {
