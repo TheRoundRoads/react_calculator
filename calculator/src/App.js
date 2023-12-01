@@ -1,6 +1,4 @@
 import "./styles.css"
-import logo from './logo.svg';
-import './App.css';
 import React, {useReducer} from 'react';
 import DigitButton from './DigitButton.js'
 import OperationButton from "./OperationButton.js";
